@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/galleryStyle.css">
+</head>
+<body>
+    <header>
+        <div class="title"> Learning Platform </div>
+        <nav>
+            <ul>
+                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="gallery.html">Gallery</a> </li>
+                <li> <a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="buttonContainer">
+             <button id="all">all</button>
+             <button id="javascript">javascript</button>
+             <button id="php">php</button>
+             <button id="react">react</button>
+             <button id="java">java</button>
+             <button id="python">python</button>
+             <div id="search">
+                <span id="submit">&#8981;</span>
+                <input type="text" id="searchInput">
+             </div>
+             
+        </div>
+       <div id="gallery">
+
+       </div>
+       <div id="navigationControls">
+           <button id="prevPage">&#10094;</button>
+           <span id="pageNumber"></span>
+           <button id="nextPage">&#10095;</button>
+       </div> 
+       <div class="show_more_container">
+           <button id="showMore">show more</button>
+       </div> 
+    </main>
+    <script src="js/loadData.js"></script>
+</body>
+</html>

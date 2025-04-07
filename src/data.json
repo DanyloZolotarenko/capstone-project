@@ -1,0 +1,90 @@
+[
+    {
+        "title": "JavaScript for beginners", 
+        "instructor": "John Smith", 
+        "level": "easy", 
+        "description": "Complete JavaScript course - From zero to results!",
+        "category": "javascript",
+        "image": "images/javascript-beginners.jpg"
+    },
+    {
+        "title": "Fundamentals of php", 
+        "instructor": "Emma Johnson", 
+        "level": "medium", 
+        "description": "Detailed PHP language course with examples, additional materials and practical tasks",
+        "category": "php",
+        "image": "images/php-fundamentals.jpg"
+    },
+    {
+        "title": "React for beginners", 
+        "instructor": "Michael Brown", 
+        "level": "easy", 
+        "description": "Learn React hooks, Context, Http, Api and deploy React project to production",
+        "category": "react",
+        "image": "images/react-beginners.jpg"
+    },
+    {
+        "title": "Advanced Java", 
+        "instructor": "Olivia Davis", 
+        "level": "hard", 
+        "description": "Learning advanced Java Functional Programming",
+        "category": "java",
+        "image": "images/java-advanced.png"
+    },
+    {
+        "title": "Advanced Python Programming", 
+        "instructor": "William Miller", 
+        "level": "hard", 
+        "description": "Make yourself a Pro by learning Advance Level Python Concepts",
+        "category": "python",
+        "image": "images/python-advanced.jpg"
+    },
+    {
+        "title": "PHP for beginners", 
+        "instructor": "Emma Johnson", 
+        "level": "easy", 
+        "description": "PHP for Beginners: learn everything you need to become a professional PHP developer",
+        "category": "php",
+        "image": "images/php-beginners.jpg"
+    },
+    {
+        "title": "Advanced Javascript", 
+        "instructor": "James Taylor", 
+        "level": "hard", 
+        "description": "You will learn enough javascript to transform from a Junior JS Dev into a Senior JS Guru",
+        "category": "javascript",
+        "image": "images/javascript-advanced.jpg"
+    },
+    {
+        "title": "Advanced React", 
+        "instructor": "Mateusz Kowalski", 
+        "level": "hard", 
+        "description": "A practical deep dive into building, scaling and maintaining high-quality design systems",
+        "category": "react",
+        "image": "images/react-advanced.png"
+    },
+    {
+        "title": "Java Programming for Beginners", 
+        "instructor": "Benjamin Thomas", 
+        "level": "easy", 
+        "description": "Java Programming for Beginners to Java Object Oriented Programming",
+        "category": "java",
+        "image": "images/java-beginners.jpg"
+    },
+    {
+        "title": "Python for Beginners", 
+        "instructor": "Emma Johnson", 
+        "level": "easy", 
+        "description": "Learn Python programming from scratch with hands-on exercises in this Python course",
+        "category": "python",
+        "image": "images/python-beginners.jpg"
+    },
+    {
+        "title": "Fundamentals of JavaScript", 
+        "instructor": "Isabella Anderson", 
+        "level": "medium", 
+        "description": "Learn all about OOP, understand the most confusing parts of JavaScript",
+        "category": "javascript",
+        "image": "images/javascript-fundamentals.jpg"
+    }
+]
