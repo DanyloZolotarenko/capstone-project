@@ -87,6 +87,10 @@ document.addEventListener("DOMContentLoaded", () => {
             card.description.toLowerCase().includes(query) ||
             card.level.toLowerCase().includes(query)
         )
+        if(visibleCards.length <= startCard){
+            startCard -= itemsPerPage;
+            currentPage--;
+      }
     }
 
         moreButton.addEventListener("click", () => {
