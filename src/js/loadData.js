@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const gallery = document.getElementById("gallery");
-    const navigationControls = document.getElementById("navigationControls");
-    const pageNumber = document.getElementById("pageNumber");
-    const nextButton = document.getElementById("nextPage");
-    const prevButton = document.getElementById("prevPage");
-    const moreButton = document.getElementById("showMore");
-    const buttonContainer = document.getElementById("buttonContainer");
-    const input = document.getElementById("searchInput");
+    const navigationControls = document.getElementById("navigation-controls");
+    const pageNumber = document.getElementById("page-number");
+    const nextButton = document.getElementById("next-page");
+    const prevButton = document.getElementById("prev-page");
+    const moreButton = document.getElementById("show-more");
+    const buttonContainer = document.getElementById("button-container");
+    const input = document.getElementById("search-input");
     const submit = document.getElementById("submit");
     const buttons = buttonContainer.querySelectorAll("button");
     
@@ -31,22 +31,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     function loadCards(){
-            gallery.innerHTML = "";
-            let currentCards = visibleCards.slice(startCard, startCard + itemsPerPage);
+        gallery.innerHTML = "";
+        let currentCards = visibleCards.slice(startCard, startCard + itemsPerPage);
 
-            currentCards.forEach(el => {
-                const card = document.createElement("div");
-                card.className = "card";
-                card.innerHTML = `
-                    <img class="card_image" src="${el.image}" alt="course image">
+        currentCards.forEach(el => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+                    <img class="card-image" src="${el.image}" alt="course image">
                     <b>${el.title}</b>
-                    <p class="instructor_name">${el.instructor}</p>
+                    <p class="instructor-name">${el.instructor}</p>
                     <p>${el.description}</p>
                     <div class="level">${el.level}</div>
                 `;
-                gallery.appendChild(card);
-                pageNumber.innerHTML = `${currentPage}`
-            });
+            gallery.appendChild(card);
+            pageNumber.innerHTML = `${currentPage}`;
+        });
     }
 
     function filterCards(category){
@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
             visibleCards = filtered.filter(card => card.category === category);
         }
         if(visibleCards.length <= startCard){
-              startCard -= itemsPerPage;
-              currentPage--;
+            startCard -= itemsPerPage;
+            currentPage--;
         }
         input.value = "";
         query = "";
@@ -86,62 +86,62 @@ document.addEventListener("DOMContentLoaded", () => {
             card.instructor.toLowerCase().includes(query) ||
             card.description.toLowerCase().includes(query) ||
             card.level.toLowerCase().includes(query)
-        )
+        );
         if(visibleCards.length <= startCard){
             startCard -= itemsPerPage;
             currentPage--;
-      }
+        }
     }
 
-        moreButton.addEventListener("click", () => {
-            visibleCards = allCards;
-            moreButton.style.display = "none";
-            navigationControls.style.display = "block"
-            if(currentFilter){
-                 visibleCards = allCards.filter(card => card.category == currentFilter);
-            }
-            if(query){
-                queryFilter();
-            }
+    moreButton.addEventListener("click", () => {
+        visibleCards = allCards;
+        moreButton.style.display = "none";
+        navigationControls.style.display = "block";
+        if(currentFilter){
+            visibleCards = allCards.filter(card => card.category == currentFilter);
+        }
+        if(query){
+            queryFilter();
+        }
                 
+        loadCards();
+    });
+
+    nextButton.addEventListener("click", () => {
+        if(startCard + itemsPerPage < visibleCards.length){
+            startCard+= itemsPerPage;
+            currentPage++;
             loadCards();
-        })
-
-        nextButton.addEventListener("click", () => {
-            if(startCard + itemsPerPage < visibleCards.length){
-                startCard+= itemsPerPage;
-                currentPage++;
-                loadCards();
-            }
-        });
+        }
+    });
     
-        prevButton.addEventListener("click", () => {
-            if(startCard - itemsPerPage >= 0){
-                startCard-= itemsPerPage;
-                currentPage--;
-                loadCards();
-            } 
-        });
+    prevButton.addEventListener("click", () => {
+        if(startCard - itemsPerPage >= 0){
+            startCard-= itemsPerPage;
+            currentPage--;
+            loadCards();
+        } 
+    });
 
-        buttons.forEach(button => {
-            button.addEventListener("click", () => {
-                filterCards(button.id);
-                loadCards();
-            });
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            filterCards(button.id);
+            loadCards();
         });
+    });
 
         
-        submit.addEventListener("click", () => {
-             query = input.value.toLowerCase();
-             if(query){
-                queryFilter();
-                loadCards();
-             }
+    submit.addEventListener("click", () => {
+        query = input.value.toLowerCase();
+        if(query){
+            queryFilter();
+            loadCards();
+        }
              
-        })
+    });
 
        
-       loadData();
+    loadData();
 });
 
 

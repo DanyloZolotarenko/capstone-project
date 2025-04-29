@@ -4,12 +4,20 @@
   "description": "Learning Platform with courses",
   "main": "index.html",
   "scripts": {
-    "start": "live-server --open=./src/index.html"
+    "start": "live-server --open=./src/index.html",
+    "sass": "sass src/scss:src/css --no-source-map",
+    "lint": "eslint src/js/**/*.js --fix && stylelint src/scss/**/*.scss --fix"
   },
   "author": "Danylo Zolotarenko",
   "license": "ISC",
   "dependencies": {
     "live-server": "^1.2.2",
     "sass": "^1.86.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.25.1",
+    "globals": "^16.0.0",
+    "stylelint": "^16.19.1",
+    "stylelint-config-standard-scss": "^14.0.0"
   }
 }

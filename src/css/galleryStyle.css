@@ -1,164 +1,181 @@
 * {
-    font-family: source-sans-pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif,
-        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-}
-.title{
-    font-size: 1.3em;
-    font-weight: bolder;
-    padding: 25px 35px;
-}
-nav ul{
-    display: flex;
-    flex-wrap: nowrap;
-    list-style: none;
-}
-nav a{
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: bolder;
-    color: black;
-}
-nav li{
-    padding-right: 35px;
+  font-family: source-sans-pro, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-#buttonContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 20px 20px 20px;
-    column-gap: 40px;
-    row-gap: 10px;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
-#buttonContainer button{
-    padding: 10px 23px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: rgb(232, 143, 186);
-    color: white;
-    transition: all 0.1s ease;
-}
-#buttonContainer button:hover{
-    transform: scale(1.1);
-}
-#search{
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    column-gap: 3px;
-}
-#search span{
-    padding: 0 10px;
-    border-radius: 5px;
-    font-size: 1.6em;
-    cursor: pointer;
-}
-#search span:hover{
-    background-color: rgb(250, 238, 244);
-}
-#search input{
-    padding-left: 5px;
+.title {
+  font-size: 1.3em;
+  font-weight: bolder;
+  padding: 25px 35px;
 }
 
-#gallery{
-margin: 0 20px;
-background-color: rgb(250, 238, 244);
-display: grid;
-grid-template-columns: repeat(auto-fill, 300px);
-justify-content: space-around;
-padding: 30px 0;
-row-gap: 30px;
+nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
 }
 
-
-.card{
-    position: relative;
-    width: 300px;
-    background-color: white;
-    border: 1px solid rgb(220, 208, 214);
-    border-radius: 5px;
-    padding-bottom: 10px;
-    cursor: pointer;
-}
-.card_image{
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 5px 5px 0 0;
-}
-.card p, .card b{
-    margin: 10px 20px;
-}
-.instructor_name{
-    font-size: 0.95em;
-    color: rgb(93, 93, 93);
-    font-weight: 600;
-}
-.level{
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 4px 6px;
-    background-color: rgba(232, 143, 186, 0.922);
-    border-radius: 0 5px 0 0;
-    color: rgb(250, 235, 242);
+nav a {
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bolder;
+  color: black;
 }
 
-#navigationControls{
-    display: none;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 45px;
-}
-.show_more_container{
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 45px;
-}
-#navigationControls button{
-    padding:0 10px;
-    transform: scale(1.7);
-    cursor: pointer;
-    color: black;
-    border: none;
-    background: none;
-    transition: transform 0.2s ease;
-}
-#navigationControls button:hover{
-    transform: scale(2);
-}
-#showMore{
-    padding: 7px 12px;
-    background-color: rgb(202, 92, 147);
-    color: white;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    font-size: 1.05em;
-    transition: all 0.1s ease;
-}
-#showMore:hover{
-    background-color: rgb(239, 108, 174);
+nav li {
+  padding-right: 35px;
 }
 
-@media (max-width: 720px){
-    .title{
-        padding: 10px;
-    }
-    nav li{
-        padding-right: 10px;
-    }
-    #gallery{
-        margin: 0;
-    }
+#button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px 20px;
+  gap: 10px 40px;
+}
+
+#button-container button {
+  padding: 10px 23px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgb(232, 143, 186);
+  color: white;
+  transition: all 0.1s ease;
+}
+
+#button-container button:hover {
+  transform: scale(1.1);
+}
+
+#search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  column-gap: 3px;
+}
+
+#search span {
+  padding: 0 10px;
+  border-radius: 5px;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+#search span:hover {
+  background-color: rgb(250, 238, 244);
+}
+
+#search input {
+  padding-left: 5px;
+}
+
+#gallery {
+  margin: 0 20px;
+  background-color: rgb(250, 238, 244);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: space-around;
+  padding: 30px 0;
+  row-gap: 30px;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  background-color: white;
+  border: 1px solid rgb(220, 208, 214);
+  border-radius: 5px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.card-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.card p, .card b {
+  margin: 10px 20px;
+}
+
+.instructor-name {
+  font-size: 0.95em;
+  color: rgb(93, 93, 93);
+  font-weight: 600;
+}
+
+.level {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 6px;
+  background-color: rgba(232, 143, 186, 0.922);
+  border-radius: 0 5px 0 0;
+  color: rgb(250, 235, 242);
+}
+
+#navigation-controls {
+  display: none;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 45px;
+}
+
+.show-more-container {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 45px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+#navigation-controls button {
+  padding: 0 10px;
+  transform: scale(1.7);
+  cursor: pointer;
+  color: black;
+  border: none;
+  background: none;
+  transition: transform 0.2s ease;
+}
+
+#navigation-controls button:hover {
+  transform: scale(2);
+}
+
+#show-more {
+  padding: 7px 12px;
+  background-color: rgb(202, 92, 147);
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 1.05em;
+  transition: all 0.1s ease;
+}
+
+#show-more:hover {
+  background-color: rgb(239, 108, 174);
+}
+
+@media (width <= 720px) {
+  .title {
+    padding: 10px;
+  }
+  nav li {
+    padding-right: 10px;
+  }
+  #gallery {
+    margin: 0;
+  }
 }
